@@ -1,0 +1,8 @@
+<p><%= form_with model: @recipe do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.collection_select :user_id, @users, :id, :name %>
+    <%= f.submit %>
+<% end %>
+</p>
